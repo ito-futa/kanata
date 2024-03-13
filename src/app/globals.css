@@ -4,31 +4,56 @@
 @tailwind utilities;
 
 :root {
+  /* accessible */
+  --accessible-color: #333;
+  /* white */
+  --white-color: #fff;
+  /* light grey */
+  --lightgrey-color: #eee;
+  /* grey */
+  --grey-color: #aaa;
+  /* black */
+  --black-color: #000;
+
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+
+/* グラデーションはvarで指定できないからしゃあなしにクラス作成 */
+.bg-primary {
+  background: linear-gradient(84deg, #F5BBD4 0%, #FDF1D5 100%);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.bg-secondary {
+  background: linear-gradient(84deg, #E773A0 0%, #B67ACC 49%, #94A8DC 100%);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.text-primary {
+  color: transparent;
+  background: linear-gradient(84deg, #F5BBD4 0%, #FDF1D5 100%);
+  background-clip: text;
+}
+
+.text-secondary {
+  color: transparent;
+  background: linear-gradient(84deg, #E773A0 0%, #B67ACC 49%, #94A8DC 100%);
+  background-clip: text;
+}
+
+.border-primary {
+  border-image: linear-gradient(84deg, #F5BBD4 0%, #FDF1D5 100%);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 4px solid transparent;
+    border-radius: 999px;
+}
+
+.border-secondary {
+    background: linear-gradient(84deg, #E773A0 0%, #B67ACC 49%, #94A8DC 100%);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 4px solid transparent;
+    border-radius: 999px;
 }

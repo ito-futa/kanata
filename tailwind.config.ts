@@ -8,10 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        primary: 'var(--color-primary)',
+        secondary: 'var(--color-secondary)',
+        accessible: 'var(--accessible-color)',
+        white: 'var(--white-color)',
+        lightgrey: 'var(--lightgrey-color)',
+        grey: 'var(--grey-color)',
+        black: 'var(--black-color)',
+      },
+      fontFamily: {
+        sans: ['Nunito', 'sans-serif'],
       },
     },
   },
