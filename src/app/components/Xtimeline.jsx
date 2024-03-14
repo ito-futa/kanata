@@ -1,5 +1,5 @@
-// ./src/app/components/Xtimeline.jsx
 import React from 'react';
+import Script from 'next/script';
 
 const Xtimeline = () => {
     return (

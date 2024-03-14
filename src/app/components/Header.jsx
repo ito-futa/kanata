@@ -9,7 +9,7 @@ const Header = () => {
                 {/* ロゴ部分 */}
                 <div className="w-[200px] px-8 h-14 bg-white rounded-2xl shadow flex justify-center items-center gap-2 ">
                     <Link href="/">
-                        <img className="w-[130px] h-[30px] hover:opacity-50" src="https://via.placeholder.com/130x30" alt="ロゴ" />
+                        <img className="w-[130px] h-[30px] hover:opacity-50" src="img/logo-type.png" alt="ロゴ" />
                     </Link>
                 </div>
 
