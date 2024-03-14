@@ -3,13 +3,13 @@ import Link from 'next/link'
 
 const Header = () => {
     return (
-        <div className="flex justify-center fixed w-full">
+        <div className="flex justify-center fixed w-full z-50">
             <div className="w-[1200px] h-24 justify-between items-center flex">
 
                 {/* ロゴ部分 */}
-                <div className="w-[200px] px-8 h-14 bg-white rounded-2xl shadow flex justify-center items-center gap-2">
+                <div className="w-[200px] px-8 h-14 bg-white rounded-2xl shadow flex justify-center items-center gap-2 ">
                     <Link href="/">
-                        <img className="w-[130px] h-[30px]" src="https://via.placeholder.com/130x30" alt="ロゴ" />
+                        <img className="w-[130px] h-[30px] hover:opacity-50" src="https://via.placeholder.com/130x30" alt="ロゴ" />
                     </Link>
                 </div>
 
