@@ -4,13 +4,15 @@ import Link from 'next/link'
 const Header = () => {
     return (
         <div className="flex justify-center fixed text-center w-full">
-            <div className="w-[1200px] h-24 px-2 justify-between items-center flex">
+            <div className="w-[1200px] h-24 justify-between items-center flex">
+
                 {/* ロゴ部分 */}
                 <div className="px-8 py-[14px] bg-white rounded-2xl shadow flex justify-center items-center gap-2">
                     <Link href="/">
                         <img className="w-[130px] h-[30px]" src="https://via.placeholder.com/130x30" alt="ロゴ" />
                     </Link>
                 </div>
+
                 {/* ナビゲーションリンク部分 */}
                 <div className="text-accessible px-8 py-4 bg-white rounded-2xl shadow flex justify-center items-center gap-2">
                     {/* Newsリンク */}
