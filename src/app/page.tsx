@@ -8,13 +8,12 @@ export default function Home() {
   return (
     <>
 
-      <section className="flex justify-center">
-        <div className="w-[1200px] my-24 flex justify-center flex-col justify-between items-center">
-          <div className="flex justify-between items-center w-full mb-8">
-            {/* タイトル部分は既存のコンポーネントをそのまま使用 */}
+      <section className="max-w-[1200px] mx-auto">
+        <div className="w-full my-24 flex justify-center flex-col items-center">
+          <div className="w-full mb-8">
             <Heading title="News" subtitle="最新情報" />
           </div>
-          <div className="grid grid-cols-3 gap-x-20 gap-y-8 w-full">
+          <div className="grid grid-cols-3 gap-y-20 justify-items-center w-full mb-20">
             <NewsCard
               imageUrl="https://via.placeholder.com/320x180"
               category="Blog"
