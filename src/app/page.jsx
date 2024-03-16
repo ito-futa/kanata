@@ -14,9 +14,7 @@ export default function Home() {
       <MainVisual />
 
       {/* Pickup */}
-      <section className="bg-black h-[560px] flex justify-center items-center">
-        <Pickup />
-      </section>
+      <Pickup />
 
       {/* News */}
       <section className="max-w-[1200px] mx-auto" >

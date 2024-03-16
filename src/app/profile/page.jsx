@@ -11,7 +11,7 @@ export default function Profile() {
     };
 
     return (
-        <div className="flex justify-center py-32 bg-white">
+        <div className="flex justify-center py-32">
             <div className="w-full max-w-6xl flex gap-8">
                 {/* 左カラム：画像 */}
                 <div className="flex-1">
@@ -25,7 +25,7 @@ export default function Profile() {
                 {/* 右カラム：テキスト */}
                 <div className="flex-1 flex flex-col justify-center">
                     {/* 名前 */}
-                    <div className="space-y-2">
+                    <div>
                         <h1 className="text-[64px] font-bold text-secondary font-['Yu_Gothic']">彩雲カナタ</h1>
                         <h2 className="text-[32px] font-medium text-secondary font-['Yu_Gothic']">Saiun Kanata</h2>
                     </div>
@@ -50,15 +50,15 @@ export default function Profile() {
                         狐耳は自然と動物たちを引き寄せる不思議な魅力を持っている。
                     </p>
                     {/* 情報テーブル */}
-                    <div className="mt-8 flex gap-16 bg-white p-8 rounded-lg border-2 border-zinc-400">
-                        <div className="text-base font-medium text-gray-800">
+                    <div className="mt-8 flex gap-16 bg-white p-8 rounded-lg border-2 border-grey border-solid">
+                        <div className="text-base font-medium text-accessible">
                             デビュー日<br />
                             誕生日<br />
                             身長<br />
                             年齢<br />
                             好きなカメラ
                         </div>
-                        <div className="text-base font-medium text-gray-800">
+                        <div className="text-base font-medium text-accessible">
                             2024年3月6日<br />
                             11月24日<br />
                             159センチ<br />
