@@ -3,8 +3,8 @@ import Button from './components/Button';
 import Heading from './components/Heading';
 import NewsCard from './components/NewsCard';
 import Xtimeline from './components/Xtimeline';
-import GradientText from './components/GradientText';
 import MainVisual from './components/MainVisual';
+import Pickup from './components/Pickup';
 
 export default function Home() {
 
@@ -12,6 +12,11 @@ export default function Home() {
     <>
       {/* MainVisual */}
       <MainVisual />
+
+      {/* Pickup */}
+      <section className="bg-black">
+        <Pickup />
+      </section>
 
       {/* News */}
       <section className="max-w-[1200px] mx-auto" >
