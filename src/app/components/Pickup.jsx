@@ -3,13 +3,19 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Image from "next/image";
 
 // 独自の矢印コンポーネント
 function NextArrow(props) {
     const { onClick } = props;
     return (
         <div className="absolute top-1/2 right-0 z-10 transform -translate-y-1/2" onClick={onClick}>
-            <img src="/img/button_next.svg" alt="Next" className="h-12 w-auto" />
+            <Image
+                src="/img/button_next.svg"
+                alt="スライダー用の右矢印（進む）"
+                width={40}
+                height={40}
+            />
         </div>
     );
 }
@@ -18,7 +24,12 @@ function PrevArrow(props) {
     const { onClick } = props;
     return (
         <div className="absolute top-1/2 left-0 z-10 transform -translate-y-1/2" onClick={onClick}>
-            <img src="/img/button_prev.svg" alt="Prev" className="h-12 w-auto" />
+            <Image
+                src="/img/button_prev.svg"
+                alt="スライダー用の左矢印（戻る）"
+                width={40}
+                height={40}
+            />
         </div>
     );
 }
