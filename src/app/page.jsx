@@ -14,7 +14,7 @@ export default function Home() {
       <MainVisual />
 
       {/* Pickup */}
-      <section className="bg-black">
+      <section className="bg-black h-[560px] flex justify-center items-center">
         <Pickup />
       </section>
 
