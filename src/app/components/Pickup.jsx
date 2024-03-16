@@ -85,7 +85,7 @@ const Pickup = () => {
                                         alt="スライド画像"
                                         width={800} // コンテナのサイズに応じて調整してください
                                         height={480} // コンテナのサイズに応じて調整してください
-                                        className='rounded-md border-lightgrey border-solid border-2 animate-fadein-3000 cursor-pointer'
+                                        className='rounded-md border-lightgrey border-solid border-2 cursor-pointer'
                                     />
                                 </Link>
                             </div>

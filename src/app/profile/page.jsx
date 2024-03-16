@@ -1,25 +1,35 @@
 "use client"
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 export default function Profile() {
     const [mainImage, setMainImage] = useState('chara_st-01.png');
+    const [imageLoading, setImageLoading] = useState(false);
 
     // アイコンをクリックしたときのハンドラ
     const handleIconClick = (iconNumber) => {
+        setImageLoading(true); // 画像読み込み開始
         setMainImage(`chara_st-0${iconNumber}.png`);
     };
+
+    // 画像読み込み状態のリセット
+    useEffect(() => {
+        if (imageLoading) {
+            setTimeout(() => setImageLoading(false), 0); // 0ミリ秒後に読み込み状態をfalseに
+        }
+    }, [imageLoading]);
 
     return (
         <div className="flex justify-center py-32">
             <div className="w-full max-w-6xl flex gap-8">
                 {/* 左カラム：画像 */}
-                <div className="flex-1">
+                <div className={`flex-1 ${!imageLoading && 'animate-fadein-500'}`}>
                     <Image
                         width={400}
                         height={800}
                         alt="キャラクター画像"
                         src={`/img/${mainImage}`}
+                        onLoadingComplete={() => setImageLoading(false)}
                     />
                 </div>
                 {/* 右カラム：テキスト */}
@@ -43,7 +53,7 @@ export default function Profile() {
                         ))}
                     </div>
                     {/* 説明テキスト */}
-                    <p className="text-base font-medium text-gray-900 mt-4">
+                    <p className="text-base font-medium text-gray-900 mt-4 leading-loose">
                         カメラが好きで、撮影のために秘境を探検するのが趣味。<br />
                         パンケーキも好きで、撮影地の近くに良いカフェがあるかも重要！<br />
                         性格は冒険心があり、新しいことに挑戦するのが大好き。<br />
