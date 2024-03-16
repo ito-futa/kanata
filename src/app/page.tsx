@@ -30,54 +30,63 @@ export default function Home() {
               category="Blog"
               date="2024/03/07"
               title="初配信を行いました！今日も元気でご飯がおいしいです！"
+              link="/news/url" // ここにリンクを追加します
             />
             <NewsCard
               imageUrl="https://via.placeholder.com/320x180"
               category="Blog"
               date="2024/03/07"
               title="初配信を行いました！今日も元気でご飯がおいしいです！"
+              link="/news/url" // ここにリンクを追加します
             />
             <NewsCard
               imageUrl="https://via.placeholder.com/320x180"
               category="Blog"
               date="2024/03/07"
               title="初配信を行いました！今日も元気でご飯がおいしいです！"
+              link="/news/url" // ここにリンクを追加します
             />
             <NewsCard
               imageUrl="https://via.placeholder.com/320x180"
               category="Blog"
               date="2024/03/07"
               title="初配信を行いました！今日も元気でご飯がおいしいです！"
+              link="/news/url" // ここにリンクを追加します
             />
             <NewsCard
               imageUrl="https://via.placeholder.com/320x180"
               category="Blog"
               date="2024/03/07"
               title="初配信を行いました！今日も元気でご飯がおいしいです！"
+              link="/news/url" // ここにリンクを追加します
             />
             <NewsCard
               imageUrl="https://via.placeholder.com/320x180"
               category="Blog"
               date="2024/03/07"
               title="初配信を行いました！今日も元気でご飯がおいしいです！"
+              link="/news/url" // ここにリンクを追加します
             />
             <NewsCard
               imageUrl="https://via.placeholder.com/320x180"
               category="Blog"
               date="2024/03/07"
               title="初配信を行いました！今日も元気でご飯がおいしいです！"
+              link="/news/url" // ここにリンクを追加します
             />
             <NewsCard
               imageUrl="https://via.placeholder.com/320x180"
               category="Blog"
               date="2024/03/07"
               title="初配信を行いました！今日も元気でご飯がおいしいです！"
+              link="/news/url" // ここにリンクを追加します
             />
             <NewsCard
               imageUrl="https://via.placeholder.com/320x180"
               category="Blog"
               date="2024/03/07"
               title="初配信を行いました！今日も元気でご飯がおいしいです！"
+              link="/news/url" // ここにリンクを追加します
             />
           </div>
           <Button buttonText="Profileを見る" link="/profile" />
