@@ -13,11 +13,6 @@ export default function Home() {
       {/* MainVisual */}
       <MainVisual />
 
-      {/* Pickup */}
-      <section className="bg-black">
-        <Pickup />
-      </section>
-
       {/* News */}
       <section className="max-w-[1200px] mx-auto" >
         <div className="w-full my-24 flex justify-center flex-col items-center">
