@@ -1,5 +1,6 @@
 import { client } from "@/lib/client";
 import React from 'react';
+import Image from "next/image";
 
 type dataType = {
     contents: contentsType[];
@@ -40,11 +41,17 @@ export default async function article() {
                             <span>{value.title}</span>
                             <span>{value.text}</span>
                             <span>{formatDate(value.createdAt)}</span>
-                            <img
-                                src={value.thumbnail.url}
-                                alt={value.title}
-                                className="w-16 h-16 mr-4 object-cover"
-                            />
+                            <div className="w-[160px] h-[160px] relative">
+                                <Image
+                                    src={value.thumbnail.url}
+                                    alt={value.title}
+                                    width={40}
+                                    height={40}
+                                    layout="responsive"
+                                    objectFit="cover"
+                                    className="object-cover"
+                                />
+                            </div>
                         </li>
                     ))}
                 </ul>
