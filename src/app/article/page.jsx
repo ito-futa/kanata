@@ -26,11 +26,15 @@ export default async function article() {
                         <span>{value.title}</span>
                         <span>{value.text}</span>
                         <span>{formatDate(value.createdAt)}</span>
-                        <img
-                            src={value.thumbnail.url}
-                            alt={value.title}
-                            className="w-16 h-16 mr-4 object-cover"
-                        />
+                        <div className="relative w-16 h-16 mr-4">
+                            <Image
+                                src={value.thumbnail.url}
+                                alt={value.title}
+                                layout="fill"
+                                objectFit="cover"
+                                className="object-cover"
+                            />
+                        </div>
                     </li>
                 ))}
             </ul>
