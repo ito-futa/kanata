@@ -28,19 +28,28 @@ export default async function ArticlePage({ params }: { params: { id: string } }
 
     return (
         <div className="flex justify-center py-32">
-            <h1>{article.title}</h1>
-            <p>{formatDate(article.createdAt)}</p>
-            <Image
-                src={article.thumbnail.url}
-                alt={article.title}
-                width={600}
-                height={400}
-                objectFit="cover"
-            />
-            <div dangerouslySetInnerHTML={{ __html: article.text }} />
-            <Link href="/article">
-                一覧に戻る
-            </Link>
+            <div className="max-w-4xl">
+                <h1 className="text-[32px] text-secondary font-bold">{article.title}</h1>
+                <p className="flex items-center gap-4 mb-4">
+                    <span className="bg-lightgrey px-2 py-1">{article.category}</span>
+                    <span className="text-grey">{formatDate(article.createdAt)}</span>
+                </p>
+                <Image
+                    src={article.thumbnail.url}
+                    alt={article.title}
+                    width={600}
+                    height={400}
+                    objectFit="cover"
+                    className="mb-8"
+                />
+                <div
+                    className="article-content mb-16"
+                    dangerouslySetInnerHTML={{ __html: article.text }}
+                />
+                <Link href="/article" className="text-blue-500 hover:underline">
+                    記事一覧に戻る
+                </Link>
+            </div>
         </div>
     );
 }
