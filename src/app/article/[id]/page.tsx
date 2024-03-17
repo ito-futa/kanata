@@ -1,9 +1,8 @@
 import { client } from "@/lib/client";
 import React from 'react';
 import Image from "next/image";
-import { useRouter } from 'next/router';
 
-type articleType = {
+type ArticleType = {
     id: string;
     title: string;
     thumbnail: { url: string };
@@ -12,19 +11,9 @@ type articleType = {
     category: string;
 };
 
-export default function ArticlePage() {
-    const router = useRouter();
-    const { id } = router.query;
-    const [article, setArticle] = React.useState<articleType | null>(null);
-
-    React.useEffect(() => {
-        if (id) {
-            client.get({ endpoint: "article", contentId: id as string })
-                .then((res: articleType) => {
-                    setArticle(res);
-                });
-        }
-    }, [id]);
+export default async function ArticlePage({ params }: { params: { id: string } }) {
+    const id = params.id;
+    const article = await client.get({ endpoint: "article", contentId: id });
 
     if (!article) return <div>Loading...</div>;
 
