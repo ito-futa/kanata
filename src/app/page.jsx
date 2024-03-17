@@ -87,7 +87,7 @@ export default function Home() {
               link="/news/url" // ここにリンクを追加します
             />
           </div>
-          <Button buttonText="Profileを見る" link="/article" />
+          <Button buttonText="一覧を見る" link="/article" />
         </div>
       </section>
 
