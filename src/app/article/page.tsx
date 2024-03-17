@@ -3,6 +3,7 @@ import { client } from "@/lib/client";
 import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
+import Heading from "../components/Heading";
 
 type dataType = {
     contents: contentsType[];
@@ -36,8 +37,11 @@ export default async function article() {
     };
 
     return (
-        <>
-            <div className="mt-4 w-full mx-8">
+        <div className="bg-white flex justify-center py-32 w-full mx-auto max-w-[800px]">
+            <div className="mt-4 w-full">
+                <div className="w-full mb-8">
+                    <Heading title="News" subtitle="最新情報" />
+                </div>
                 <ul>
                     {data?.contents.map((value, index) => (
                         <li key={index}>
@@ -61,6 +65,6 @@ export default async function article() {
                     ))}
                 </ul>
             </div>
-        </>
+        </div>
     )
 }

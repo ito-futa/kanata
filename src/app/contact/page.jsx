@@ -34,7 +34,7 @@ export default function ContactForm() {
 
     return (
         <div className="bg-white flex justify-center py-32">
-            <form onSubmit={handleSubmit} className="w-full max-w-lg p-8" style={{ maxWidth: '800px' }}>
+            <form onSubmit={handleSubmit} className="w-full p-8 max-w-[800px]">
                 <div className="mb-12">
                     <Heading title="Contact" subtitle="お問い合わせ" />
                 </div>

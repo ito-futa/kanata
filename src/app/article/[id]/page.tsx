@@ -1,6 +1,7 @@
 import { client } from "@/lib/client";
 import React from 'react';
 import Image from "next/image";
+import Link from "next/link";
 
 type ArticleType = {
     id: string;
@@ -26,21 +27,20 @@ export default async function ArticlePage({ params }: { params: { id: string } }
     };
 
     return (
-        <div className="p-4">
-            <h1 className="text-3xl font-bold mb-4">{article.title}</h1>
-            <div className="mb-4">
-                <Image
-                    src={article.thumbnail.url}
-                    alt={article.title}
-                    width={600}
-                    height={400}
-                    objectFit="cover"
-                />
-            </div>
-            <p className="text-gray-600">{formatDate(article.createdAt)}</p>
-            <div className="prose mt-4">
-                <div dangerouslySetInnerHTML={{ __html: article.text }} />
-            </div>
+        <div className="flex justify-center py-32">
+            <h1>{article.title}</h1>
+            <p>{formatDate(article.createdAt)}</p>
+            <Image
+                src={article.thumbnail.url}
+                alt={article.title}
+                width={600}
+                height={400}
+                objectFit="cover"
+            />
+            <div dangerouslySetInnerHTML={{ __html: article.text }} />
+            <Link href="/article">
+                一覧に戻る
+            </Link>
         </div>
     );
 }
