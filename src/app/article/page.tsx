@@ -1,6 +1,8 @@
+// /src/app/article/page.tsx
 import { client } from "@/lib/client";
 import React from 'react';
 import Image from "next/image";
+import Link from "next/link";
 
 type dataType = {
     contents: contentsType[];
@@ -14,6 +16,7 @@ type contentsType = {
     thumbnail: { url: string }; // サムネイル画像のURLを持つオブジェクト
     text: string; // リッチエディタの本文
     createdAt: string; // 作成日時
+    category: string; //カテゴリ
 }
 
 export default async function article() {
@@ -38,8 +41,10 @@ export default async function article() {
                 <ul>
                     {data?.contents.map((value, index) => (
                         <li key={index}>
-                            <span>{value.title}</span>
-                            <span>{value.text}</span>
+                            <Link href={`/article/${value.id}`}>
+                                <span>{value.title}</span>
+                            </Link>
+                            <span>{value.category}</span>
                             <span>{formatDate(value.createdAt)}</span>
                             <div className="w-[160px] h-[160px] relative">
                                 <Image
