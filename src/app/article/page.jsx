@@ -1,5 +1,6 @@
 import { client } from "@/lib/client";
 import React from 'react';
+import Image from 'next/image';
 
 export default async function article() {
     // microCMSからデータを取得する処理

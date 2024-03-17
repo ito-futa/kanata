@@ -21,7 +21,7 @@ export default function Profile() {
 
     return (
         <>
-            <div className="flex justify-center py-32 bg-left bg-bottom bg-no-repeat w-screen" style={{ backgroundImage: "url('/img/profile_bg-01.svg')" }}>
+            <div className="flex justify-center py-32 bg-cover bg-center bg-no-repeat h-screen" style={{ backgroundImage: "url('/img/profile_bg-01.svg')" }}>
                 <div className="w-full max-w-5xl flex gap-8">
                     {/* 左カラム：画像 */}
                     <div className={`flex-1 ${!imageLoading && 'animate-fadein-500'}`}>
