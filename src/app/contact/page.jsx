@@ -114,9 +114,9 @@ export default function ContactForm() {
                 <div className="flex justify-center">
                     <button type='submit'>
                         <div className="border-secondary p-1 rounded-full inline-flex justify-center items-center group">
-                            <div className="px-16 py-4 rounded-full justify-center items-center gap-8 inline-flex bg-white group-hover:bg-secondary">
+                            <div className="px-16 py-4 rounded-full justify-center items-center gap-8 inline-flex bg-white group-hover:bg-secondary transition-colors duration-300">
                                 <div className="font-bold font-['Yu Gothic'] text-base">
-                                    <span className="text-secondary group-hover:text-white">送信する</span>
+                                    <span className="text-secondary group-hover:text-white transition-colors duration-300">送信する</span>
                                 </div>
                             </div>
                         </div>

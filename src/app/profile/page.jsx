@@ -67,7 +67,7 @@ export default function Profile() {
                                 誕生日<br />
                                 身長<br />
                                 年齢<br />
-                                好きなカメラ
+                                好きなカメラメーカー
                             </div>
                             <div className="text-base text-accessible leading-loose">
                                 2024年3月6日<br />

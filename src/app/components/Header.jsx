@@ -17,7 +17,7 @@ const Header = () => {
                 <div className="text-accessible px-8 h-14 bg-white rounded-2xl shadow flex justify-center items-center gap-2">
                     {/* Newsリンク */}
                     <div className="w-[80px] flex justify-center hover:text-lightgrey">
-                        <Link href="/news">
+                        <Link href="/article">
                             News
                         </Link>
                     </div>

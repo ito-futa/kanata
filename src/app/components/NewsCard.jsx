@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const NewsCard = ({ imageUrl, category, date, title, link }) => {
     return (
-        <a href={link} className="w-80 bg-white rounded-lg border-solid border-2 border-grey flex-col overflow-hidden hover:opacity-50">
+        <a href={link} className="w-80 bg-white rounded-lg border-solid border-2 border-grey flex-col overflow-hidden hover:opacity-50 transition-opacity duration-300">
             <Image
                 src="/img/mv_bg-01.jpg"
                 alt="Placeholder Image"
