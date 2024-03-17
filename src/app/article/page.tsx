@@ -20,7 +20,7 @@ export default async function article() {
     //microCMSからデータを取得する処理
     const data: dataType = await client.get({
         endpoint: 'article', //microCMSで設定したendpoint
-        queries: { fields: 'id,title,thumbnail,text,createdAt', limit: 9 }, // limitを設定して取得件数を増やす
+        queries: { fields: 'id,title,thumbnail,text,createdAt,category', limit: 9 }, // limitを設定して取得件数を増やす
     });
 
     // 日付を YYYY/MM/DD 形式でフォーマットする関数

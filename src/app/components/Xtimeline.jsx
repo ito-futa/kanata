@@ -1,16 +1,22 @@
 // クライアント側の実行を指定
 "use client"
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Script from 'next/script';
 
 const Xtimeline = () => {
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = "https://platform.twitter.com/widgets.js";
+        script.async = true;
+        script.onload = () => {
+            window.twttr.widgets.load();
+        };
+        document.body.appendChild(script);
+    }, []);
+
     return (
-        <>
-            <a className="twitter-timeline" href="https://twitter.com/SaiunKanata?ref_src=twsrc%5Etfw">Tweets by SaiunKanata</a>
-            {/* Scriptコンポーネントを使用して外部スクリプトを読み込む */}
-            <Script async src="https://platform.twitter.com/widgets.js" charset="utf-8" />
-        </>
+        <a className="twitter-timeline" href="https://twitter.com/SaiunKanata?ref_src=twsrc%5Etfw">Tweets by SaiunKanata</a>
     );
 };
 
