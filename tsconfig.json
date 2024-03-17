@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "esnext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -11,7 +16,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "preserve", // ここを "react-jsx" に変更
     "plugins": [
       {
         "name": "next"
@@ -20,7 +25,9 @@
     "strictNullChecks": true,
     "baseUrl": ".", // プロジェクトのルートディレクトリを基準とする
     "paths": {
-      "@/lib/*": ["src/lib/*"] // "@/lib"エイリアスを設定
+      "@/lib/*": [
+        "src/lib/*"
+      ] // "@/lib"エイリアスを設定
     }
   },
   "include": [
@@ -29,5 +36,7 @@
     "**/*.ts",
     "**/*.tsx"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }
