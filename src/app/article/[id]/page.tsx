@@ -1,7 +1,9 @@
+// src/app/article/[id]/page.tsx
 import { client } from "@/lib/client";
 import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
+import ParallaxEffect from '/Users/geometria/project/kanata/src/app/components/ParallaxEffect';
 
 type ArticleType = {
     id: string;
@@ -28,6 +30,7 @@ export default async function ArticlePage({ params }: { params: { id: string } }
 
     return (
         <div className="flex justify-center py-32">
+            <ParallaxEffect />
             <div className="max-w-4xl">
                 <h1 className="text-[32px] text-secondary font-bold">{article.title}</h1>
                 <p className="flex items-center gap-4 mb-4">

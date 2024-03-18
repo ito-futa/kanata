@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect } from 'react';
 import Heading from '../components/Heading';
+import ParallaxEffect from '../components/ParallaxEffect';
 
 export default function ContactForm() {
     const [name, setName] = useState('');
@@ -33,7 +34,8 @@ export default function ContactForm() {
     };
 
     return (
-        <div className="bg-white flex justify-center py-32">
+        <div className="flex justify-center py-32">
+            <ParallaxEffect />
             <form onSubmit={handleSubmit} className="w-full p-8 max-w-[800px]">
                 <div className="mb-12">
                     <Heading title="Contact" subtitle="お問い合わせ" />
