@@ -3,7 +3,7 @@ import { client } from "@/lib/client";
 import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import ParallaxEffect from '/Users/geometria/project/kanata/src/app/components/ParallaxEffect';
+import ParallaxEffect from '../../components/ParallaxEffect';
 
 type ArticleType = {
     id: string;
