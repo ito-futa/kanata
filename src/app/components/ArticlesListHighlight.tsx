@@ -1,11 +1,9 @@
-// src/app/article/page.tsx
+/// src/app/components/ArticlesListHighlight.tsx
 import { client } from "@/lib/client";
 import React from 'react';
-import Image from "next/image";
-import Link from "next/link";
 import Heading from "../components/Heading";
-import ParallaxEffect from '../components/ParallaxEffect';
 import ArticleCard from '../components/ArticleCard';
+import Button from "./Button";
 
 type dataType = {
     contents: contentsType[];
@@ -22,11 +20,11 @@ type contentsType = {
     category: string; //カテゴリ
 }
 
-export default async function article() {
+export default async function ArticlesListHighlight() {
     //microCMSからデータを取得する処理
     const data: dataType = await client.get({
         endpoint: 'article', //microCMSで設定したendpoint
-        queries: { fields: 'id,title,thumbnail,text,createdAt,category', limit: 15 }, // limitを15に
+        queries: { fields: 'id,title,thumbnail,text,createdAt,category', limit: 6 }, // limitを6に
     });
 
     // 日付を YYYY/MM/DD 形式でフォーマットする関数
@@ -40,9 +38,8 @@ export default async function article() {
 
 
     return (
-        <section className="max-w-[1200px] mx-auto py-32" >
-            <ParallaxEffect />
-            <div className="w-full mb-24 flex justify-center flex-col items-center">
+        <section className="max-w-[1200px] mx-auto" >
+            <div className="w-full my-24 flex justify-center flex-col items-center">
                 <div className="w-full mb-8">
                     <Heading title="News" subtitle="最新情報" />
                 </div>
@@ -58,7 +55,8 @@ export default async function article() {
                         />
                     ))}
                 </div>
+                <Button buttonText="一覧を見る" link="/article" />
             </div>
         </section>
     )
-}
+};

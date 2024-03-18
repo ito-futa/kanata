@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Button from './components/Button';
 import Heading from './components/Heading';
-import NewsCard from './components/NewsCard';
 import Xtimeline from './components/Xtimeline';
 import MainVisual from './components/MainVisual';
 import Pickup from './components/Pickup';
+import ArticlesListHighlight from './components/ArticlesListHighlight'
 
 export default function Home() {
 
@@ -17,79 +17,7 @@ export default function Home() {
       <Pickup />
 
       {/* News */}
-      <section className="max-w-[1200px] mx-auto" >
-        <div className="w-full my-24 flex justify-center flex-col items-center">
-          <div className="w-full mb-8">
-            <Heading title="News" subtitle="最新情報" />
-          </div>
-          <div className="grid grid-cols-3 gap-y-20 justify-items-center w-full mb-20">
-            <NewsCard
-              imageUrl="https://via.placeholder.com/320x180"
-              category="Blog"
-              date="2024/03/07"
-              title="初配信を行いました！今日も元気でご飯がおいしいです！"
-              link="/news/url" // ここにリンクを追加します
-            />
-            <NewsCard
-              imageUrl="https://via.placeholder.com/320x180"
-              category="Blog"
-              date="2024/03/07"
-              title="初配信を行いました！今日も元気でご飯がおいしいです！"
-              link="/news/url" // ここにリンクを追加します
-            />
-            <NewsCard
-              imageUrl="https://via.placeholder.com/320x180"
-              category="Blog"
-              date="2024/03/07"
-              title="初配信を行いました！今日も元気でご飯がおいしいです！"
-              link="/news/url" // ここにリンクを追加します
-            />
-            <NewsCard
-              imageUrl="https://via.placeholder.com/320x180"
-              category="Blog"
-              date="2024/03/07"
-              title="初配信を行いました！今日も元気でご飯がおいしいです！"
-              link="/news/url" // ここにリンクを追加します
-            />
-            <NewsCard
-              imageUrl="https://via.placeholder.com/320x180"
-              category="Blog"
-              date="2024/03/07"
-              title="初配信を行いました！今日も元気でご飯がおいしいです！"
-              link="/news/url" // ここにリンクを追加します
-            />
-            <NewsCard
-              imageUrl="https://via.placeholder.com/320x180"
-              category="Blog"
-              date="2024/03/07"
-              title="初配信を行いました！今日も元気でご飯がおいしいです！"
-              link="/news/url" // ここにリンクを追加します
-            />
-            <NewsCard
-              imageUrl="https://via.placeholder.com/320x180"
-              category="Blog"
-              date="2024/03/07"
-              title="初配信を行いました！今日も元気でご飯がおいしいです！"
-              link="/news/url" // ここにリンクを追加します
-            />
-            <NewsCard
-              imageUrl="https://via.placeholder.com/320x180"
-              category="Blog"
-              date="2024/03/07"
-              title="初配信を行いました！今日も元気でご飯がおいしいです！"
-              link="/news/url" // ここにリンクを追加します
-            />
-            <NewsCard
-              imageUrl="https://via.placeholder.com/320x180"
-              category="Blog"
-              date="2024/03/07"
-              title="初配信を行いました！今日も元気でご飯がおいしいです！"
-              link="/news/url" // ここにリンクを追加します
-            />
-          </div>
-          <Button buttonText="一覧を見る" link="/article" />
-        </div>
-      </section>
+      <ArticlesListHighlight />
 
       {/* about */}
       <section className="max-w-[1200px] mx-auto" >
