@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Heading from "../components/Heading";
 import ParallaxEffect from '../components/ParallaxEffect';
+import ArticleCard from '../components/ArticleCard';
 
 type dataType = {
     contents: contentsType[];
@@ -38,35 +39,25 @@ export default async function article() {
     };
 
     return (
-        <div className="flex justify-center py-32 w-full mx-auto max-w-[800px]">
+        <section className="max-w-[1200px] mx-auto" >
             <ParallaxEffect />
-            <div className="mt-4 w-full">
+            <div className="w-full my-24 flex justify-center flex-col items-center">
                 <div className="w-full mb-8">
                     <Heading title="News" subtitle="最新情報" />
                 </div>
-                <ul>
-                    {data?.contents.map((value, index) => (
-                        <li key={index}>
-                            <Link href={`/article/${value.id}`}>
-                                <span>{value.title}</span>
-                            </Link>
-                            <span>{value.category}</span>
-                            <span>{formatDate(value.createdAt)}</span>
-                            <div className="w-[160px] h-[160px] relative">
-                                <Image
-                                    src={value.thumbnail.url}
-                                    alt={value.title}
-                                    width={40}
-                                    height={40}
-                                    layout="responsive"
-                                    objectFit="cover"
-                                    className="object-cover"
-                                />
-                            </div>
-                        </li>
+                <div className="grid grid-cols-3 gap-y-20 justify-items-center w-full mb-20">
+                    {data?.contents.map((article) => (
+                        <ArticleCard
+                            key={article.id}
+                            imageUrl={article.thumbnail.url}
+                            category={article.category}
+                            date={formatDate(article.createdAt)}
+                            title={article.title}
+                            link={`/article/${article.id}`}
+                        />
                     ))}
-                </ul>
+                </div>
             </div>
-        </div>
+        </section>
     )
 }
