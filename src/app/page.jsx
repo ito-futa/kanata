@@ -29,11 +29,9 @@ export default function Home() {
           <div className="py-24 px-24 bg-primary rounded-xl items-center gap-16 inline-flex">
             <Image
               src="/img/chara_with_camera-01.png"
-              className="w-[420px]"
               alt="カメラを持つ彩雲カナタ"
               width={420}
               height={500}
-              objectFit='contain'
             />
             <div className="flex-col items-start gap-4 inline-flex">
               <div className="text-secondary text-[64px] font-bold font-['Yu Gothic']">What is Kanata?</div>
@@ -58,11 +56,9 @@ export default function Home() {
         <div className="absolute right-0">
           <Image
             src="/img/chara_sd-01.png"
-            className="w-[300px]"
             alt="アイキャッチ"
             width={300}
             height={300}
-            objectFit='contain'
           />
         </div>
       </section>
