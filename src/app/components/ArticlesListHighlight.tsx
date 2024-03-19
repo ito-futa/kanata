@@ -1,4 +1,4 @@
-/// src/app/components/ArticlesListHighlight.tsx
+// src/app/components/ArticlesListHighlight.tsx
 import { client } from "@/lib/client";
 import React from 'react';
 import Heading from "../components/Heading";

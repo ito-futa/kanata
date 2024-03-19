@@ -22,7 +22,7 @@ const ParallaxEffect = () => {
                 style={{
                     backgroundImage: `url(/img/bg_parallax01_pc.png.webp)`,
                     backgroundSize: '100% auto',
-                    transform: `translateY(${offsetY * -0.5}px)`,
+                    transform: `translateY(${offsetY * -0.3}px)`,
                 }}
             ></div>
         </div>
