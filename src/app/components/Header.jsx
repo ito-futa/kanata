@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Header = () => {
     return (
@@ -9,7 +10,14 @@ const Header = () => {
                 {/* ロゴ部分 */}
                 <div className="w-[200px] px-8 h-14 bg-white rounded-2xl shadow flex justify-center items-center gap-2 ">
                     <Link href="/">
-                        <img className="w-[130px] h-[30px] hover:opacity-50" src="img/logo-type.png" alt="ロゴ" />
+                        <div className="w-[130px] h-[30px] hover:opacity-50">
+                            <Image
+                                src="/img/logo-type.png"
+                                alt="ロゴ"
+                                width={130}
+                                height={30}
+                            />
+                        </div>
                     </Link>
                 </div>
 

@@ -17,15 +17,17 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ imageUrl, category, date, tit
     };
 
     return (
-        <Link href={link} className="w-80 bg-white rounded-lg shadow-md flex-col overflow-hidden hover:opacity-50 transition-opacity duration-300">
+        <Link href={link} className="group w-80 bg-white rounded-lg shadow-md flex-col overflow-hidden transition-opacity duration-300 hover:opacity-50">
             <div>
-                <Image
-                    src={imageUrl}
-                    alt={title}
-                    width={320}
-                    height={180}
-                    className='h-[180px] object-cover'
-                />
+                <div className="overflow-hidden">
+                    <Image
+                        src={imageUrl}
+                        alt={title}
+                        width={320}
+                        height={180}
+                        className="h-[180px] object-cover transition-transform duration-300 group-hover:scale-125"
+                    />
+                </div>
                 <div className="flex w-full">
                     {category.map((category, index) => (
                         <div key={index} className={`${getCategoryClass(category)} w-[50%] flex items-center justify-center px-2 py-0.5`}>

@@ -49,6 +49,7 @@ export default function Profile() {
                                         height={100}
                                         alt={`彩雲カナタのアイコン${i + 1}`}
                                         src={`/img/chara_icon-0${i + 1}.png`}
+                                        className='hover:opacity-50'
                                     />
                                 </button>
                             ))}
