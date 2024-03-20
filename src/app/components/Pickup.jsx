@@ -9,7 +9,7 @@ import Link from 'next/link';
 // 戻る・進むボタンのコンポーネントの引数を修正
 const PrevArrow = ({ onClick }) => {
     return (
-        <button className="absolute top-1/2 left-[22.5%] z-10 transform -translate-y-1/2" onClick={onClick}>
+        <button className="absolute top-1/2 left-[23%] z-10 transform -translate-y-1/2" onClick={onClick}>
             <Image
                 src="/img/button_prev.svg"
                 alt="スライダー用の左矢印（戻る）"
@@ -22,7 +22,7 @@ const PrevArrow = ({ onClick }) => {
 
 const NextArrow = ({ onClick }) => {
     return (
-        <button className="absolute top-1/2 right-[22.5%] z-10 transform -translate-y-1/2" onClick={onClick}>
+        <button className="absolute top-1/2 right-[23%] z-10 transform -translate-y-1/2" onClick={onClick}>
             <Image
                 src="/img/button_next.svg"
                 alt="スライダー用の右矢印（進む）"
@@ -70,7 +70,7 @@ const Pickup = () => {
 
     return (
         <section className="flex items-center bg-black relative overflow-hidden">
-            <div className="w-full py-12">
+            <div className="w-full py-4">
                 <Slider {...settings}> {
                     images.map((image, index) => (
                         <div key={index} >
