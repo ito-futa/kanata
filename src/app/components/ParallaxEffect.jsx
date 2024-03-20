@@ -23,7 +23,7 @@ const ParallaxEffect = () => {
                     backgroundImage: `url(/img/parallax_pc-01.png)`,
                     backgroundSize: 'auto 100%',
                     backgroundRepeat: 'repeat-y',
-                    transform: `translateY(${offsetY * -0.3}px)`,
+                    transform: `translateY(${offsetY * -0.2}px)`,
                 }}
             ></div>
         </div>

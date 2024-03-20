@@ -43,7 +43,7 @@ export default function Home() {
                 <div className="text-accessible text-[32px] font-bold font-['Yu Gothic']">「絶景を一緒に探しましょう」</div>
                 <div className="text-accessible text-base font-bold font-['Yu Gothic']">探検好きな狐耳Vtuber、彩雲カナタ<br />“楽しい”を探す旅にあなたも加わりませんか？</div>
               </div>
-              <Button buttonText="Profileを見る" link="/profile" />
+              <Button buttonText="プロフィールを見る" link="/profile" />
             </div>
           </div>
         </div>

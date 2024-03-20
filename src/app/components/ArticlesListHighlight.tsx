@@ -55,7 +55,7 @@ export default async function ArticlesListHighlight() {
                         />
                     ))}
                 </div>
-                <Button buttonText="一覧を見る" link="/article" />
+                <Button buttonText="ニュース一覧を見る" link="/article" />
             </div>
         </section>
     )
