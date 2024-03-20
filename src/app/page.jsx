@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Background from './components/Background';
 import ParallaxEffect from './components/ParallaxEffect';
 import Button from './components/Button';
 import Heading from './components/Heading';
@@ -11,7 +12,10 @@ export default function Home() {
 
   return (
     <>
-      {/* Parallax */}
+      {/* Background */}
+      <Background />
+
+      {/* ParallaxEffect */}
       <ParallaxEffect />
 
       {/* MainVisual */}

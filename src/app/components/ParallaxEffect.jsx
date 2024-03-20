@@ -7,7 +7,7 @@ const ParallaxEffect = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const newOffsetY = window.pageYOffset % (window.innerHeight * 1.5);
+            const newOffsetY = window.pageYOffset;
             setOffsetY(newOffsetY);
         };
 
@@ -18,10 +18,11 @@ const ParallaxEffect = () => {
     return (
         <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-[-5]">
             <div
-                className="absolute w-full h-[150%] bg-no-repeat bg-center transition-transform animate-fadein-500 duration-[2s] ease-out"
+                className="w-full h-full bg-repeat-y bg-center"
                 style={{
-                    backgroundImage: `url(/img/bg_parallax01_pc.png.webp)`,
-                    backgroundSize: '100% auto',
+                    backgroundImage: `url(/img/parallax_pc-01.png)`,
+                    backgroundSize: 'auto 100%',
+                    backgroundRepeat: 'repeat-y',
                     transform: `translateY(${offsetY * -0.3}px)`,
                 }}
             ></div>

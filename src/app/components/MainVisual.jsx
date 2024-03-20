@@ -6,7 +6,7 @@ import GradientText from './GradientText.jsx';
 const MainVisual = () => {
 
     return (
-        <section className="mx-auto animate-fadein-1000 pt-28 pb-24 max-w-[1200px] h-[930px] relative bg-white border-8">
+        <section className="mx-auto animate-fadein-1000 pt-28 pb-24 max-w-[1200px] h-[930px] relative border-8">
             <div className="z-10 max-w-[1000px] h[600px] mx-auto">
                 <Image
                     src="/img/mv_bg-01.jpg"

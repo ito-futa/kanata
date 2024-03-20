@@ -13,11 +13,11 @@ type ArticleCardProps = {
 
 const ArticleCard: React.FC<ArticleCardProps> = ({ imageUrl, category, date, title, link }) => {
     const getCategoryClass = (categoryName: string) => {
-        return categoryName === 'Blog' ? 'bg-black' : categoryName === 'Information' ? 'bg-secondary' : categoryName === 'Movie' ? 'bg-secondary' : 'bg-grey';
+        return categoryName === 'Blog' ? 'bg-[#1fd3a3]' : categoryName === 'Information' ? 'bg-[#ff66b7]' : categoryName === 'Movie' ? 'bg-secondary' : 'bg-[#ffaa36]';
     };
 
     return (
-        <Link href={link} className="w-80 bg-white rounded-lg border-solid border-2 border-grey flex-col overflow-hidden hover:opacity-50 transition-opacity duration-300">
+        <Link href={link} className="w-80 bg-white rounded-lg shadow-md flex-col overflow-hidden hover:opacity-50 transition-opacity duration-300">
             <div>
                 <Image
                     src={imageUrl}

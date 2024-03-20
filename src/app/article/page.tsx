@@ -1,10 +1,9 @@
 // src/app/article/page.tsx
 import { client } from "@/lib/client";
 import React from 'react';
-import Image from "next/image";
-import Link from "next/link";
 import Heading from "../components/Heading";
 import ParallaxEffect from '../components/ParallaxEffect';
+import Background from '../components/Background';
 import ArticleCard from '../components/ArticleCard';
 
 type dataType = {
@@ -19,7 +18,7 @@ type contentsType = {
     thumbnail: { url: string }; // サムネイル画像のURLを持つオブジェクト
     text: string; // リッチエディタの本文
     createdAt: string; // 作成日時
-    category: string; //カテゴリ
+    category: string[]; //カテゴリ
 }
 
 export default async function article() {
@@ -41,6 +40,9 @@ export default async function article() {
 
     return (
         <section className="max-w-[1200px] mx-auto py-32" >
+            {/* Background */}
+            <Background />
+            {/* ParallaxEffect */}
             <ParallaxEffect />
             <div className="w-full mb-24 flex justify-center flex-col items-center">
                 <div className="w-full mb-8">

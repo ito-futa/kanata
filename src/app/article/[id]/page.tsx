@@ -4,15 +4,7 @@ import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import ParallaxEffect from '../../components/ParallaxEffect';
-
-type ArticleType = {
-    id: string;
-    title: string;
-    thumbnail: { url: string };
-    text: string;
-    createdAt: string;
-    category: string;
-};
+import Background from '../../components/Background';
 
 export default async function ArticlePage({ params }: { params: { id: string } }) {
     const id = params.id;
@@ -30,6 +22,9 @@ export default async function ArticlePage({ params }: { params: { id: string } }
 
     return (
         <div className="flex justify-center py-32">
+            {/* Background */}
+            <Background />
+            {/* ParallaxEffect */}
             <ParallaxEffect />
             <div className="max-w-4xl">
                 <h1 className="text-[32px] text-secondary font-bold">{article.title}</h1>

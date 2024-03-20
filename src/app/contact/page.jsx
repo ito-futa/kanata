@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import Heading from '../components/Heading';
 import ParallaxEffect from '../components/ParallaxEffect';
+import Background from '../components/Background';
 
 export default function ContactForm() {
     const [name, setName] = useState('');
@@ -35,6 +36,9 @@ export default function ContactForm() {
 
     return (
         <div className="flex justify-center py-32">
+            {/* Background */}
+            <Background />
+            {/* ParallaxEffect */}
             <ParallaxEffect />
             <form onSubmit={handleSubmit} className="w-full max-w-[800px]">
                 <div className="mb-12">
