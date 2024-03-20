@@ -18,7 +18,7 @@ module.exports = {
         black: 'var(--black-color)',
       },
       fontFamily: {
-        sans: ['Nunito', 'sans-serif'],
+        // kiwi: ['"Kiwi Maru"', 'sans-serif'],
       },
       keyframes: {
         fadein: {

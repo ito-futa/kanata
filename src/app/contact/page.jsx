@@ -60,7 +60,7 @@ export default function ContactForm() {
                         type="text"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        placeholder="山田太郎"
+                        placeholder="あなたのお名前を記入してください"
                         className="mt-1 block w-full border-grey border-2 border-solid p-2 rounded-md"
                     />
                     {errors.name && <p className="text-red-500 text-xs italic">{errors.name}</p>}
@@ -121,7 +121,7 @@ export default function ContactForm() {
                     <button type='submit'>
                         <div className="border-secondary p-1 rounded-full inline-flex justify-center items-center group">
                             <div className="px-16 py-4 rounded-full justify-center items-center gap-8 inline-flex bg-white group-hover:bg-secondary transition-colors duration-300">
-                                <div className="font-bold font-['Yu Gothic'] text-base">
+                                <div className="font-bold text-base">
                                     <span className="text-secondary group-hover:text-white transition-colors duration-300">送信する</span>
                                 </div>
                             </div>

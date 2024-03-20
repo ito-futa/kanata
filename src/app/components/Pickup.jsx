@@ -9,7 +9,7 @@ import Link from 'next/link';
 // 戻る・進むボタンのコンポーネントの引数を修正
 const PrevArrow = ({ onClick }) => {
     return (
-        <button className="absolute top-1/2 left-10 z-10 transform -translate-y-1/2" onClick={onClick}>
+        <button className="absolute top-1/2 left-[22.5%] z-10 transform -translate-y-1/2" onClick={onClick}>
             <Image
                 src="/img/button_prev.svg"
                 alt="スライダー用の左矢印（戻る）"
@@ -22,7 +22,7 @@ const PrevArrow = ({ onClick }) => {
 
 const NextArrow = ({ onClick }) => {
     return (
-        <button className="absolute top-1/2 right-10 z-10 transform -translate-y-1/2" onClick={onClick}>
+        <button className="absolute top-1/2 right-[22.5%] z-10 transform -translate-y-1/2" onClick={onClick}>
             <Image
                 src="/img/button_next.svg"
                 alt="スライダー用の右矢印（進む）"
@@ -36,20 +36,19 @@ const NextArrow = ({ onClick }) => {
 // Pickupコンポーネントの設定を修正
 const Pickup = () => {
     const settings = {
-        dots: false, //ドット（インジケーター）の表示・非表示
+        dots: false,
         infinite: true,
         speed: 300,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
-        centerMode: false, //現在表示しているスライドを中央に配置し、次のスライドを少し見切れて表示させます。
-        centerPadding: '0', //centerModeを指定した場合に見切れて表示をさせる割合を指定します。
+        centerMode: true,
+        centerPadding: '25%',
         prevArrow: <PrevArrow />,
         nextArrow: <NextArrow />,
-        adaptiveHeight: false, //スライドの高さを自動で調整するかどうか
-        // centerPadding: 80, //スライドとスライドの間隔
-        swipeToSlide: true, // ドラッグ、スワイプでのスクロールを有効にするか
+        adaptiveHeight: false,
+        swipeToSlide: true,
         responsive: [
             {
                 breakpoint: 1024,
@@ -60,31 +59,28 @@ const Pickup = () => {
                     dots: true,
                 }
             },
-            // 他のブレークポイントもここに追加できます
         ]
     };
 
     const images = [
-        { src: "/img/mv_bg-01.jpg", url: "/link-1" },
-        { src: "/img/mv_bg-01.jpg", url: "/link-2" },
-        { src: "/img/mv_bg-01.jpg", url: "/link-3" }
+        { src: "/img/mv_bg-01.jpg", url: "/" },
+        { src: "/img/mv_bg-01.jpg", url: "/" },
+        { src: "/img/mv_bg-01.jpg", url: "/" }
     ];
 
-
-
     return (
-        <section className="bg-black flex items-center relative overflow-hidden">
+        <section className="flex items-center bg-black relative overflow-hidden">
             <div className="w-full py-12">
-                <Slider Slider {...settings}> {
+                <Slider {...settings}> {
                     images.map((image, index) => (
-                        <div key={index}>
+                        <div key={index} >
                             <div className="flex justify-center items-center">
                                 <Link href={image.url} passHref>
                                     <Image
                                         src={image.src}
                                         alt="スライド画像"
-                                        width={800} // コンテナのサイズに応じて調整してください
-                                        height={480} // コンテナのサイズに応じて調整してください
+                                        width={800}
+                                        height={480}
                                         className='rounded-md border-lightgrey border-solid border-2 cursor-pointer'
                                     />
                                 </Link>
@@ -93,9 +89,10 @@ const Pickup = () => {
                     ))
                 }
                 </Slider>
-            </div >
-        </section >
+            </div>
+        </section>
     );
 };
+
 
 export default Pickup;

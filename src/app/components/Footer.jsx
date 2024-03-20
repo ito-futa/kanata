@@ -25,7 +25,7 @@ const Footer = () => {
                     />
                 </a>
             </div>
-            <div className="text-white font-bold font-['Yu Gothic']">© 2024 Saiun Kanata Co., Ltd.</div>
+            <div className="text-white font-bold ">© 2024 Saiun Kanata Co., Ltd.</div>
         </div>
     );
 };
