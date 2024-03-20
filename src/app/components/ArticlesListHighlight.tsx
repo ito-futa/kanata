@@ -17,7 +17,7 @@ type contentsType = {
     thumbnail: { url: string }; // サムネイル画像のURLを持つオブジェクト
     text: string; // リッチエディタの本文
     createdAt: string; // 作成日時
-    category: string; //カテゴリ
+    category: string[]; //カテゴリ
 }
 
 export default async function ArticlesListHighlight() {
