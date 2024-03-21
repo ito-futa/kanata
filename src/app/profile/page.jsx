@@ -6,6 +6,30 @@ export default function Profile() {
     const [mainImage, setMainImage] = useState('chara_st-01.png');
     const [imageLoading, setImageLoading] = useState(false);
 
+    // プリロードする画像のパスを配列で定義 // 差分1
+    const imagePaths = [
+        'chara_st-01.png',
+        'chara_st-02.png',
+        'chara_st-03.png',
+        'chara_st-04.png',
+        'chara_st-05.png',
+    ];
+
+    // 画像をプリロードする関数を定義 // 差分2
+    const preloadImages = () => {
+        imagePaths.forEach(image => {
+            if (typeof window !== 'undefined') {
+                const img = new window.Image();
+                img.src = `/img/${image}`;
+            }
+        });
+    };
+
+    // コンポーネントのマウント時に画像をプリロード // 差分3
+    useEffect(() => {
+        preloadImages();
+    }, []);
+
     // アイコンをクリックしたときのハンドラ
     const handleIconClick = (iconNumber) => {
         setImageLoading(true); // 画像読み込み開始
