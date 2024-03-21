@@ -9,7 +9,7 @@ import Link from 'next/link';
 // 戻る・進むボタンのコンポーネントの引数を修正
 const PrevArrow = ({ onClick }) => {
     return (
-        <button className="absolute top-1/2 left-[14%] z-10 transform -translate-y-1/2" onClick={onClick}>
+        <button className="absolute top-1/2 left-[16%] z-10 transform -translate-y-1/2" onClick={onClick}>
             <Image
                 src="/img/button_prev.svg"
                 alt="スライダー用の左矢印（戻る）"
@@ -22,7 +22,7 @@ const PrevArrow = ({ onClick }) => {
 
 const NextArrow = ({ onClick }) => {
     return (
-        <button className="absolute top-1/2 right-[14%] z-10 transform -translate-y-1/2" onClick={onClick}>
+        <button className="absolute top-1/2 right-[16%] z-10 transform -translate-y-1/2" onClick={onClick}>
             <Image
                 src="/img/button_next.svg"
                 alt="スライダー用の右矢印（進む）"
@@ -44,7 +44,7 @@ const Pickup = () => {
         autoplay: true,
         autoplaySpeed: 3000,
         centerMode: true,
-        centerPadding: '16%',
+        centerPadding: '18%',
         lazyLoad: false, // 遅延読み込みを無効にする
         prevArrow: <PrevArrow />,
         nextArrow: <NextArrow />,
