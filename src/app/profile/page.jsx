@@ -1,6 +1,8 @@
 "use client"
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import ParallaxEffect from '../components/ParallaxEffect';
+import Background from '../components/Background';
 
 export default function Profile() {
     const [mainImage, setMainImage] = useState('chara_st-01.png');
@@ -45,7 +47,11 @@ export default function Profile() {
 
     return (
         <>
-            <div className="flex justify-center py-32 bg-cover bg-center bg-no-repeat h-screen" style={{ backgroundImage: "url('/img/profile_bg-01.svg')" }}>
+            {/* Background */}
+            <Background />
+            {/* ParallaxEffect */}
+            <ParallaxEffect />
+            <div className="flex justify-center py-32 mb-32 h-screen">
                 <div className="w-full max-w-5xl flex gap-8">
                     {/* 左カラム：画像 */}
                     <div className={`flex-1 ${!imageLoading && 'animate-fadein-500'}`}>
