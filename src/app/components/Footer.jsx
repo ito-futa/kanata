@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <div className="w-full h-[330px] px-[440px] py-16 bg-black flex-col justify-between items-center inline-flex">
             <div className=" justify-center items-center gap-16 inline-flex">
-                <a href="#">
+                <a href="https://www.youtube.com/">
                     <Image
                         src="/img/icon_youtube-01.png"
                         alt="YouTube icon"

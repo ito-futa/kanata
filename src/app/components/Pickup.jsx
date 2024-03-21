@@ -63,9 +63,9 @@ const Pickup = () => {
     };
 
     const images = [
-        { src: "/img/mv_bg-01.jpg", url: "/" },
-        { src: "/img/mv_bg-01.jpg", url: "/" },
-        { src: "/img/mv_bg-01.jpg", url: "/" }
+        { src: "/img/thumbnail-1.jpg", url: "/" },
+        { src: "/img/thumbnail-2.jpg", url: "/" },
+        { src: "/img/thumbnail-3.jpg", url: "/" }
     ];
 
     return (
