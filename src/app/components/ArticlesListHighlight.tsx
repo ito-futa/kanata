@@ -16,7 +16,7 @@ type contentsType = {
     title: string;
     thumbnail: { url: string }; // サムネイル画像のURLを持つオブジェクト
     text: string; // リッチエディタの本文
-    createdAt: string; // 作成日時
+    publishedAt: string; // 更新日時
     category: string[]; //カテゴリ
 }
 
@@ -24,7 +24,7 @@ export default async function ArticlesListHighlight() {
     //microCMSからデータを取得する処理
     const data: dataType = await client.get({
         endpoint: 'article', //microCMSで設定したendpoint
-        queries: { fields: 'id,title,thumbnail,text,createdAt,category', limit: 6 }, // limitを6に
+        queries: { fields: 'id,title,thumbnail,text,publishedAt,category', limit: 6 }, // limitを6に
     });
 
     // 日付を YYYY/MM/DD 形式でフォーマットする関数
@@ -49,7 +49,7 @@ export default async function ArticlesListHighlight() {
                             key={article.id}
                             imageUrl={article.thumbnail.url}
                             category={article.category}
-                            date={formatDate(article.createdAt)}
+                            date={formatDate(article.publishedAt)}
                             title={article.title}
                             link={`/article/${article.id}`}
                         />
