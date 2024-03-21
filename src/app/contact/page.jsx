@@ -52,7 +52,7 @@ export default function ContactForm() {
                 </p>
 
                 <div className="mb-12">
-                    <h4 className="text-accessible font-bold mb-2 inline-block mr-2">
+                    <h4 className="text-accessible mb-2 inline-block mr-2">
                         ■ お名前</h4>
                     <span className="bg-red-500 text-white p-1 rounded-md text-sm">必須</span>
 
@@ -67,7 +67,7 @@ export default function ContactForm() {
                 </div>
 
                 <div className="mb-12">
-                    <h4 className="text-accessible font-bold mb-2 inline-block mr-2">
+                    <h4 className="text-accessible mb-2 inline-block mr-2">
                         ■ ご連絡先メールアドレス
                     </h4>
                     <span className="bg-red-500 text-white p-1 rounded-md text-sm">必須</span>
@@ -83,7 +83,7 @@ export default function ContactForm() {
                 </div>
 
                 <div className="mb-12">
-                    <h4 className="text-accessible font-bold mb-2 inline-block mr-2">
+                    <h4 className="text-accessible mb-2 inline-block mr-2">
                         ■ お問い合わせの種類
                     </h4>
                     <span className="bg-red-500 text-white p-1 rounded-md text-sm">必須</span>
@@ -103,7 +103,7 @@ export default function ContactForm() {
                 </div>
 
                 <div className="mb-12">
-                    <h4 className="text-accessible font-bold mb-2 inline-block mr-2">
+                    <h4 className="text-accessible mb-2 inline-block mr-2">
                         ■ お問い合わせ内容
                     </h4>
                     <span className="bg-red-500 text-white p-1 rounded-md text-sm">必須</span>
@@ -121,7 +121,7 @@ export default function ContactForm() {
                     <button type='submit'>
                         <div className="border-secondary p-1 rounded-full inline-flex justify-center items-center group">
                             <div className="px-16 py-4 rounded-full justify-center items-center gap-8 inline-flex bg-white group-hover:bg-secondary transition-colors duration-300">
-                                <div className="font-bold text-base">
+                                <div className="text-base">
                                     <span className="text-secondary group-hover:text-white transition-colors duration-300">送信する</span>
                                 </div>
                             </div>

@@ -40,10 +40,10 @@ export default function Home() {
               height={500}
             />
             <div className="flex-col items-start gap-4 inline-flex">
-              <div className="text-secondary text-[56px] font-bold ">Who is Kanata?</div>
+              <div className="text-secondary text-[56px]">Who is Kanata?</div>
               <div className="pb-4 flex-col items-start flex gap-2">
-                <div className="text-accessible text-[32px] font-bold">「絶景を一緒に探しましょう」</div>
-                <div className="text-accessible text-base font-bold">探検好きな狐耳Vtuber、彩雲カナタ<br />“楽しい”を探す旅にあなたも加わりませんか？</div>
+                <div className="text-accessible text-[32px]">「絶景を一緒に探しましょう」</div>
+                <div className="text-accessible text-base">探検好きな狐耳Vtuber、彩雲カナタ<br />“楽しい”を探す旅にあなたも加わりませんか？</div>
               </div>
               <Button buttonText="プロフィールを見る" link="/profile" />
             </div>

@@ -37,7 +37,7 @@ export default function Profile() {
                     <div className="flex-1 flex flex-col justify-center">
                         {/* 名前 */}
                         <div className='mb-8'>
-                            <h1 className="text-[64px] font-bold text-secondary">彩雲カナタ</h1>
+                            <h1 className="text-[64px] font-medium text-secondary">彩雲カナタ</h1>
                             <h2 className="text-[32px] font-medium text-secondary">Saiun Kanata</h2>
                         </div>
                         {/* 画像リスト */}
