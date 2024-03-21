@@ -13,7 +13,7 @@ type ArticleCardProps = {
 
 const ArticleCard: React.FC<ArticleCardProps> = ({ imageUrl, category, date, title, link }) => {
     const getCategoryClass = (categoryName: string) => {
-        return categoryName === 'Blog' ? 'bg-[#1fd3a3]' : categoryName === 'Information' ? 'bg-[#ff66b7]' : categoryName === 'Movie' ? 'bg-secondary' : 'bg-[#ffaa36]';
+        return categoryName === 'Blog' ? 'bg-[#1fd3a3]' : categoryName === 'Information' ? 'bg-[#ff66b7]' : categoryName === 'Movie' ? 'bg-[#ffaa36]' : 'bg-grey';
     };
 
     return (

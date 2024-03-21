@@ -95,7 +95,7 @@ export default function Profile() {
                                 好きなカメラメーカー
                             </div>
                             <div className="text-base text-accessible leading-loose">
-                                2024年3月6日<br />
+                                2024年3月15日<br />
                                 11月24日<br />
                                 159センチ<br />
                                 ??歳<br />
