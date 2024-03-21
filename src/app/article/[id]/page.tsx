@@ -5,8 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import ParallaxEffect from '../../components/ParallaxEffect';
 import Background from '../../components/Background';
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
 
 export default async function ArticlePage({ params }: { params: { id: string } }) {
     const id = params.id;
