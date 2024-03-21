@@ -7,7 +7,7 @@ const Button = ({ buttonText, link }) => {
                 href={link}
                 className="px-16 py-5 rounded-full justify-center items-center gap-8 inline-flex bg-white group-hover:bg-secondary transition-colors duration-300"
             >
-                <div className="font-bold text-base">
+                <div className="text-base font-semibold">
                     <span className="text-secondary group-hover:text-white transition-colors duration-300">{buttonText}  ▶</span>
                 </div>
             </a>

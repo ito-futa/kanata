@@ -11,9 +11,9 @@ const Heading = ({ title, subtitle }) => {
           alt="Star"
           width={40}
           height={40} />
-        <h2 className="text-[64px] font-bold font-['Yu Gothic UI'] text-secondary">{title}</h2>
+        <h2 className="text-[64px] font-semibold font-['Yu Gothic UI'] text-secondary">{title}</h2>
       </div>
-      <div className="text-[32px] font-bold font-['Yu Gothic UI'] relative -top-4 text-secondary">{subtitle}</div>
+      <div className="text-[32px] font-semibold font-['Yu Gothic UI'] relative -top-4 text-secondary">{subtitle}</div>
     </div>
   );
 };
