@@ -45,6 +45,7 @@ const Pickup = () => {
         autoplaySpeed: 3000,
         centerMode: true,
         centerPadding: '25%',
+        lazyLoad: false, // 遅延読み込みを無効にする
         prevArrow: <PrevArrow />,
         nextArrow: <NextArrow />,
         adaptiveHeight: false,

@@ -14,6 +14,7 @@ const MainVisual = () => {
                     width={1000}
                     height={600}
                     className="rounded-xl"
+                    priority // この画像を優先的に読み込む
                 />
             </div>
             <div className="z-20 animate-fadein-2000 w-1/2 absolute transform -translate-y-1/4 top-[30%] left-1/2 -translate-x-1/2">
@@ -22,6 +23,7 @@ const MainVisual = () => {
                     alt="メインビジュアルのキャラ画像"
                     width={700}
                     height={600}
+                    priority // この画像を優先的に読み込む
                 />
             </div>
             <div className="animate-fadein-3000 absolute z-30 transform -translate-y-1/4 top-[58%] left-[22%] -translate-x-1/2"><GradientText text="終わらない旅へ" /></div>
